@@ -1,16 +1,64 @@
-@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
 
 body {
     font-family: 'Gowun Batang', serif;
     /* font-family: 'Noto Serif KR', serif; */
-    background-color: black;
+    background-color: #E6E6E6;
     margin: 0;
     padding: 0;
 }
 
 @media (max-width: 767px){
+    /*di01*/
+    .selects{
+        float: left;
+    }
+    .menu{
+        float: right;
+    }
+    .write{
+        clear: both;
+    }
+    select {
+        border: none;
+        font-family: 'Gowun Batang', serif;
+        font-size: 16px;
+        font-weight: 700;
+    }
+    .weather {
+        width: 100vw;
+        height: 240px;
+        background-color: white;
+        background: linear-gradient(-90deg , #1d2c41, #f76d55,#639ace,#b7c9D9);
+        background-repeat: no-repeat;
+        background-size: 700% 700%;
+        position: relative;
+        animation: backgroundChange 100s ease-in-out infinite;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+    .window{
+        background-image: url("../image/cat.png");
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        width: 100vw;
+        height: 240px;
+    }
+    .memo {
+        padding-top: 10px;
+        text-align: left;
+        border-top: #22131a 2px solid;
+        border-bottom: #22131a 2px solid;
+        width: 100vw;
+        /*height: 100vh;*/
+        min-height: 68vh;
+        background-color: white;
+    }
+    /*ji01*/
     .material-symbols-outlined {
     font-variation-settings:
     'FILL' 0,
@@ -24,7 +72,8 @@ body {
     }
     .Logletter{
         font-family: 'Playfair Display', serif;
-        padding-top: 70%;
+        padding-top: 65%;
+        padding-bottom: 5%;
         font-size: 50px;
         color: white;
         text-shadow: 2px 2px 2px #6e6e6e;
@@ -64,6 +113,7 @@ body {
         text-shadow: 2px 2px 2px #6e6e6e;
         text-align: center;
     }
+    /* co01 */
     .cobg {
         margin: 0;
         text-align: center;
