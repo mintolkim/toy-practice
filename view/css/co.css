@@ -1,13 +1,69 @@
-@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
 
 body {
     font-family: 'Gowun Batang', serif;
+    /* font-family: 'Noto Serif KR', serif; */
     background-color: black;
     margin: 0;
     padding: 0;
 }
 
 @media (max-width: 767px){
+    .material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 48
+    }
+    a {
+        color: white;
+        text-shadow: 2px 2px 2px #6e6e6e;
+    }
+    .Logletter{
+        font-family: 'Playfair Display', serif;
+        padding-top: 70%;
+        font-size: 50px;
+        color: white;
+        text-shadow: 2px 2px 2px #6e6e6e;
+    }
+    .account {
+        border: none;
+        /*box-shadow: 2px 2px 2px #6e6e6e;*/
+        border-radius: 3px;
+        width: 180px;
+        height: 37px;
+        margin-bottom: 20px;
+        filter: alpha(opacity=40);
+        opacity: 0.4;
+        -moz-opacity:0.4;
+        text-align: center;
+        font-weight: 700;
+        font-size: 20px;
+        font-family: 'Gowun Batang', serif;
+    }
+    .enter {
+        font-size: 25px;
+        font-weight: 600;
+    }
+    .checkbox {
+        border-radius: 3px;
+        width: 15px;
+        height: 15px;
+        filter: alpha(opacity=80);
+        opacity: 0.8;
+        -moz-opacity:0.8;
+    }
+    .login {
+        font-size: 15px;
+        padding-top: 5%;
+        margin-bottom: 10%;
+        color: white;
+        text-shadow: 2px 2px 2px #6e6e6e;
+        text-align: center;
+    }
     .cobg {
         margin: 0;
         text-align: center;
@@ -31,7 +87,7 @@ body {
         height: 100vh;
     }
     .myltmm {
-        padding-top: 100%;
+        padding-top: 85%;
         font-size: 50px;
         color: white;
         text-shadow: 2px 2px 2px #6e6e6e;
