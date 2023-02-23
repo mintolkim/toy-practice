@@ -42,7 +42,8 @@ body {
         overflow: hidden;
     }
     .window{
-        background-image: url("../image/cat.png");
+        transition: all ease-in-out 4ms;
+        background-image: url("../image/item.png");
         background-size: 100% 100%;
         background-repeat: no-repeat;
         width: 100vw;
