@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&display=swap');
+
+body {
+    font-family: 'Gowun Batang', serif;
+    background-color: black;
+    margin: 0;
+    padding: 0;
+}
+
+@media (max-width: 767px){
+    .cobg {
+        margin: 0;
+        text-align: center;
+        width: 100vw;
+        height: 100vh;
+        background: linear-gradient(-45deg, #1d2c41, #b7c9D9, #639ace, #22131a);
+        background-repeat: no-repeat;
+        background-size: 400% 400%;
+        position: relative;
+        animation: backgroundChange 15s ease-in-out infinite;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+    .cobgimg{
+        background-image: url("../image/bg3.png");
+        background-repeat: no-repeat;
+        background-size: 110% 100%;
+        width: 100vw;
+        height: 100vh;
+    }
+    .myltmm {
+        padding-top: 100%;
+        font-size: 50px;
+        color: white;
+        text-shadow: 2px 2px 2px #6e6e6e;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .cobg {
+        text-align: center;
+        width: 100vw;
+        height: 100vh;
+        background: linear-gradient(-45deg, #1d2c41, #b7c9D9, #639ace, #22131a);
+        background-repeat: no-repeat;
+        background-size: 400% 400%;
+        position: relative;
+        animation: backgroundChange 15s ease-in-out infinite;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+    .cobgimg{
+        background-image: url("../image/bg3.png");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        width: 100vw;
+        height: 100vh;
+    }
+    .myltmm {
+        padding-top: 30%;
+        font-size: 100px;
+        color: white;
+        text-shadow: 2px 2px 2px #6e6e6e;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+    .cobg {
+        text-align: center;
+        width: 100vw;
+        height: 100vh;
+        background: linear-gradient(-45deg, #1d2c41, #b7c9D9, #639ace, #22131a);
+        background-repeat: no-repeat;
+        background-size: 400% 400%;
+        position: relative;
+        animation: backgroundChange 15s ease-in-out infinite;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+    .cobgimg{
+        background-image: url("../image/bg3.png");
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        width: 100vw;
+        height: 100vh;
+    }
+    .myltmm {
+        padding-top: 30%;
+        font-size: 100px;
+        color: white;
+        text-shadow: 2px 2px 2px #6e6e6e;
+    }
+}
+
+@media (min-width: 1200px) {
+    .cobg {
+        text-align: center;
+        width: 100vw;
+        height: 100vh;
+        background: linear-gradient(-45deg, #df98b6, #b7c9D9, #639ace, #22131a);
+        background-repeat: no-repeat;
+        background-size: 400% 400%;
+        position: relative;
+        animation: backgroundChange 20s ease-in-out infinite;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+    }
+    .cobgimg{
+        background-image: url("../image/bg3.png");
+        background-repeat: no-repeat;
+        background-size: 100%;
+        width: 100vw;
+        height: 100vh;
+    }
+    .myltmm {
+        /*-webkit-text-stroke: 2px #332a2e;*/
+        font-weight: 900;
+        padding-top: 30%;
+        font-size: 100px;
+        color: white;
+        text-shadow: 2px 2px 2px #6e6e6e;
+    }
+}
+
+@keyframes backgroundChange {
+    0% {
+        background-position: 0 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+
