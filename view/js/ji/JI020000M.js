@@ -11,10 +11,8 @@ var JI020000M = (function ($) {
     "use strict"
 
     $(function () {
-
         $("#joinMemo").on("click", joinCheck);
         $("#pwConfirm").on("change", pwChck);
-
     });
 
     /**
@@ -32,6 +30,8 @@ var JI020000M = (function ($) {
             alert("비밀번호를 한번 더 입력해주세요");
         } else if ($("#password").val() != $("#pwConfirm").val()) {
             alert("비밀번호가 일치하지 않습니다");
+        } else if ($("#password").val().length < 4 ){
+            alert("비밀번호는 4글자 보다 작을 수 없습니다.");
         } else {
             alert("가입이여");
         }
@@ -42,7 +42,6 @@ var JI020000M = (function ($) {
      * $('#pwConfirm') password 체크 하는 ajax
      */
     var pwChck = function () {
-
         $.ajax({
             url : "/pwChk",
             type : "post",
@@ -51,7 +50,6 @@ var JI020000M = (function ($) {
             sucess : function (resultPw){
                 if(resultPw == 1){
                     console.log("?");
-
                 }else{
                     console.log("??");
                 }
