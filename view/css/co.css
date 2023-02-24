@@ -67,14 +67,30 @@ body {
         background-color: white;
         box-shadow: 4px #6e6e6e;
     }
-    /*ji01*/
-    .material-symbols-outlined {
-    font-variation-settings:
-    'FILL' 0,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 48
+    /*ji02*/
+    .join {
+        background-image: url(../image//joinM.png);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        width: 100vw;
+        height: 100vh;
     }
+    .join table {
+        text-align: left;
+    }
+    .welcome {
+        font-family: 'Playfair Display', serif;
+        padding-top: 40%;
+        padding-bottom: 5%;
+        font-size: 50px;
+        color: white;
+        text-shadow: 2px 2px 2px black;
+    }
+    .joinMemo {
+        font-size: 21px;
+        padding-top: 95%;
+    }
+    /*ji01*/
     a {
         text-shadow: 2px 2px 2px black;
         color: white;
@@ -178,14 +194,6 @@ body {
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
-    /*JI01*/
-    .material-symbols-outlined {
-        font-variation-settings:
-        'FILL' 0,
-        'wght' 400,
-        'GRAD' 0,
-        'opsz' 48
-    }
     a {
         text-shadow: 2px 2px 2px black;
         color: white;
@@ -287,14 +295,6 @@ body {
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
-    /*JI01*/
-    .material-symbols-outlined {
-        font-variation-settings:
-        'FILL' 0,
-        'wght' 400,
-        'GRAD' 0,
-        'opsz' 48
-    }
     a {
 
         text-shadow: 2px 2px 2px black;
@@ -399,14 +399,6 @@ body {
 }
 
 @media (min-width: 1200px) {
-    /*JI01*/
-    .material-symbols-outlined {
-        font-variation-settings:
-        'FILL' 0,
-        'wght' 400,
-        'GRAD' 0,
-        'opsz' 48
-    }
     a {
         top: 500px;
         text-shadow: 2px 2px 2px black;

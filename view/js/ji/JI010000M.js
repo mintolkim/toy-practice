@@ -12,6 +12,9 @@ var JI010000M = (function ($) {
 
     $(function () { 
         $('#enter').on("click",clickEvent);
+        $('#join').on("click",joinAccount);
+        $('#find').on("click",findAccount);
+
     });
 
     /**
@@ -19,6 +22,26 @@ var JI010000M = (function ($) {
 	 */
     var clickEvent = function () {
         $("#form").attr("action","/enter");
+        $("#form").attr("method","post");
+        $("#form").submit();
+        return
+    };
+
+    /**
+     * $('#cobg') 클릭시 login submit
+     */
+    var joinAccount = function () {
+        $("#form").attr("action","/join");
+        $("#form").attr("method","post");
+        $("#form").submit();
+        return
+    };
+    
+    /**
+     * $('#cobg') 클릭시 login submit
+     */
+    var findAccount = function () {
+        $("#form").attr("action","/find");
         $("#form").attr("method","post");
         $("#form").submit();
         return
