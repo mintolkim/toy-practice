@@ -48,8 +48,11 @@ var JI020000M = (function ($) {
             dataType : "JSON",
             data : {password : $("#password").val(), pwConfirm : $("#pwConfirm").val()},
             sucess : function (resultPw){
+                console.log(JSON.stringify(resultPw));
                 if(resultPw == 1){
-                    console.log("?");
+                    alert("음")
+                    $("#pwChk").val("Ok");
+                    $("#pwChk").css("color", "blue");
                 }else{
                     console.log("??");
                 }

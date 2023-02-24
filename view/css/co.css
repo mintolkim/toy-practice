@@ -176,11 +176,11 @@ body {
     }
     .click {
         position: absolute; z-index: 3;
-        padding-top: 105%;
+        padding-top: 109%;
         left: 45%;
         color: white;
         text-shadow: 2px 2px 2px #6e6e6e;
-        animation: blink-effect 0.7s step-end infinite; 
+        animation: blink-effect 0.9s step-end infinite; 
     }
     .myltmm {
         position: absolute; z-index: 3;

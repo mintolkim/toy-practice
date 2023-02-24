@@ -8,12 +8,15 @@ const result = {
         res.render("ejs/ji/JI030000M.ejs");
     },
     pwChk : (req, res) => {
-        const { password, pwConfirm } = req.body; 
+        const { password, pwConfirm } = req.body;
+
+        console.log(password);
+        console.log(pwConfirm);
 
         var resultPw = 1;
 
         
-        return res.render(resultPw);
+        return res.json({resultPw : resultPw});
     }
 }
 
