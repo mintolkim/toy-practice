@@ -158,6 +158,14 @@ body {
         height: 100vh;
         animation: curtain-ani 20s cubic-bezier(0.67, -0.07, 0.25, 0.6) infinite alternate;
     }
+    .click {
+        position: absolute; z-index: 3;
+        padding-top: 105%;
+        left: 45%;
+        color: white;
+        text-shadow: 2px 2px 2px #6e6e6e;
+        animation: blink-effect 0.7s step-end infinite; 
+    }
     .myltmm {
         position: absolute; z-index: 3;
         padding-top: 60%;
@@ -241,6 +249,15 @@ body {
         justify-content: center;
         align-items: center;
         overflow: hidden;
+    }
+    .click {
+        position: absolute; z-index: 3;
+        padding-top: 72%;
+        left: 45%;
+        font-size: 30px;
+        color: white;
+        text-shadow: 2px 2px 2px #6e6e6e;
+        animation: blink-effect 0.7s step-end infinite; 
     }
     .cobgimg{
         background-image: url("../image/windowT.png");
@@ -361,6 +378,15 @@ body {
         height: 100vh;
         animation: curtain-ani 20s cubic-bezier(0.67, -0.07, 0.25, 0.6) infinite alternate;
     }
+    .click {
+        position: absolute; z-index: 3;
+        padding-top: 43%;
+        left: 45%;
+        font-size: 30px;
+        color: white;
+        text-shadow: 2px 2px 2px #6e6e6e;
+        animation: blink-effect 0.7s step-end infinite; 
+    }
     .myltmm {
         left: 44%;
         position: absolute; z-index: 2;
@@ -463,6 +489,15 @@ body {
         height: 100vh;
         animation: curtain-ani 20s cubic-bezier(0.67, -0.07, 0.25, 0.6) infinite alternate;
     }
+    .click {
+        position: absolute; z-index: 3;
+        padding-top: 35%;
+        left: 45.5%;
+        font-size: 30px;
+        color: white;
+        text-shadow: 2px 2px 2px #6e6e6e;
+        animation: blink-effect 0.7s step-end infinite; 
+    }
     .myltmm {
         left: 44.5%;
         top: 30%;
@@ -476,23 +511,19 @@ body {
 }
 
 @keyframes  curtain-ani {
-    0% { transform: translate(0, 0);}
-    100% { transform: translate(100px, 0);}
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(100px, 0); }
 }
 
 @keyframes backgroundChange {
-    0% {
-        background-position: 0 50%;
-    }
-    50% {
-        background-position: 100% 50%;
-    }
-    100% {
-        background-position: 0 50%;
-    }
+    0% { background-position: 0 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0 50%; }
 }
-
 @keyframes fadein {
-    from {opacity: 0;}
-    to {opacity: 1;}
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
+@keyframes blink-effect { 
+    50% { opacity: 0;} 
+} 
