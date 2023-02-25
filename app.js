@@ -3,6 +3,8 @@ const path = require("path");
 const app = express();
 const port = 4000;
 const http = require("http").Server(app);
+const mysql = require("mysql");
+
 const bodyParser = require("body-parser");                  //bodyParser 설정
 const router = require("./server/route/router");
 

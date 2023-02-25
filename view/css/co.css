@@ -51,7 +51,7 @@ body {
 
     }
     .window{
-        animation: curtain-ani 20s cubic-bezier(0.67, -0.07, 0.25, 0.6) infinite alternate;
+        animation: curtain-aniM 20s cubic-bezier(0.67, -0.07, 0.25, 0.6) infinite alternate;
         background-image: url("../image/item.png");
         background-size: 100% 100%;
         background-repeat: no-repeat;
@@ -505,6 +505,11 @@ body {
 @keyframes  curtain-ani {
     0% { transform: translate(0, 0); }
     100% { transform: translate(100px, 0); }
+}
+
+@keyframes  curtain-aniM {
+    0% { transform: translate(90px, 0); }
+    100% { transform: translate(0, 0); }
 }
 
 @keyframes backgroundChange {

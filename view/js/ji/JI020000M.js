@@ -20,6 +20,7 @@ var JI020000M = (function ($) {
         
         $("#joinMemo").on("click", joinCheck);
         $("#pwConfirm").on("change", pwChck);
+        $("#password").on("change", pwChck);
     });
     
     /**
@@ -49,7 +50,9 @@ var JI020000M = (function ($) {
             alert("비밀번호는 4글자 보다 작을 수 없습니다.");
             return
         } else {
-            alert("가입이여");
+            $("form").attr("action", "/login");
+            $("form").attr("method", "post");
+            $("form").submit();
         }
         
     }
