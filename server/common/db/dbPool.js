@@ -5,7 +5,7 @@ const pool = mysql.createPool(dbConfig);
 function connection(queries) {
     pool.getConnection((err, connection) => {
         if (err) {
-            connection.release();
+            //connection.release();
             throw err;
         } else {
             console.log("============================");
@@ -20,7 +20,6 @@ function connection(queries) {
                 }
             });
             console.log("============================");
-            connection.release();
         }
     })
 }

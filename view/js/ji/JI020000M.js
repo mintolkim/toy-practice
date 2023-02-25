@@ -50,7 +50,7 @@ var JI020000M = (function ($) {
             alert("비밀번호는 4글자 보다 작을 수 없습니다.");
             return
         } else {
-            $("form").attr("action", "/login");
+            $("form").attr("action", "/joinAccount");
             $("form").attr("method", "post");
             $("form").submit();
         }

@@ -9,6 +9,7 @@ router.get("/",CO010000MController.main);
 router.post("/login",JI010000MController.login);
 router.post("/find", JI010000MController.find);
 router.post("/join", JI020000MController.account);
+router.post("/joinAccount", JI020000MController.join);
 router.post("/pwChk",JI020000MController.pwChk)
 router.post("/enter", DI010000MController.note);
 

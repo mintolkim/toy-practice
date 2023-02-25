@@ -1,0 +1,1 @@
+exports.userInsert = "Insert INTO user (id, password, nick) VALUES (?, ?, ?)";
