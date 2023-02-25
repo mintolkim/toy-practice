@@ -17,6 +17,24 @@ const result = {
         
         return res.json(resultPw);
     },
+    idChk : (req, res) => {
+        const id = req.body.id;
+
+        var resultId = JI020000MService.idChk(id);
+        
+        console.log(resultId);
+
+        if(resultId == ""){
+            //console.log(resultId);
+            resultId = 1;
+        }else{
+            //console.log(resultId);
+            resultId = 0;
+        }
+        
+        res.json(resultId);
+    }
+    ,
     join : (req, res) => {
         var message = "가입을 환영합니다 \n 로그인 해주세요";
         const { nick, id, password } = req.body;

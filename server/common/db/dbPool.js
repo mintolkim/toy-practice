@@ -3,9 +3,8 @@ const mysql = require("mysql");
 const pool = mysql.createPool(dbConfig);
 
 function connection(queries) {
-    pool.getConnection((err, connection) => {
+    return pool.getConnection((err, connection) => {
         if (err) {
-            //connection.release();
             throw err;
         } else {
             console.log("============================");
@@ -17,6 +16,7 @@ function connection(queries) {
                 } else {
                     console.log(result);
                     connection.release();
+                    return result
                 }
             });
             console.log("============================");

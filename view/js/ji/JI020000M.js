@@ -21,6 +21,7 @@ var JI020000M = (function ($) {
         $("#joinMemo").on("click", joinCheck);
         $("#pwConfirm").on("change", pwChck);
         $("#password").on("change", pwChck);
+        $("#id").on("change", idChck);
     });
     
     /**
@@ -78,7 +79,31 @@ var JI020000M = (function ($) {
                 console.log("error");
             }
         });
-        
     }
+
+        /**
+     * $('#pwConfirm') password 체크 하는 ajax
+    */
+   var idChck = function () {
+    $.ajax({
+        url : "/idChk",
+        type : "post",
+        data : {id : $("#id").val()},
+        success : function(resultId){
+            if(resultId === 1){
+                $("#idChk").css("color", "#6ed7ff");
+                $("#idChk").val(1);
+                $("#idChk").html("OK");
+             }else{
+                $("#idChk").val(0);
+                 $("#idChk").html("중복된 아이디 입니다.");
+                 $("#idChk").css("color", "#ffc0c0");
+             }
+         },
+         error: function(){
+             console.log("error");
+         }
+     });
+ }
     
 })(jQuery);

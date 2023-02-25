@@ -1,1 +1,2 @@
-exports.userInsert = "Insert INTO user (id, password, nick) VALUES (?, ?, ?)";
+exports.userInsert = "INSERT INTO user (id, password, nick) VALUES (?, ?, ?)";
+exports.chkUesrId = "SELECT id FROM user WHERE id = ?";
