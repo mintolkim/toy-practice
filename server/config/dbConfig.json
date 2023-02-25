@@ -1,7 +1,0 @@
-{
-    "host": "172.30.1.45",
-    "port": 3306,
-    "user": "mintol",
-    "password": "mintolsproject",
-    "database": "memo"
-}
