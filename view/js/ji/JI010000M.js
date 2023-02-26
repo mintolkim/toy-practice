@@ -14,37 +14,44 @@ var JI010000M = (function ($) {
         $('#enter').on("click",clickEvent);
         $('#join').on("click",joinAccount);
         $('#find').on("click",findAccount);
-
     });
 
     /**
-	 * $('#cobg') 클릭시 login submit
+	 * $('#enter') 클릭시 login submit
 	 */
     var clickEvent = function () {
-        $("#form").attr("action","/enter");
-        $("#form").attr("method","post");
-        $("#form").submit();
-        return
+        if($("#id").val() == ""){
+            alert("아이디를 입력해주세요");
+            return
+        }else if($("#password").val() == ""){
+            alert("비밀번호를 입력해주세요");
+            return
+        }else{
+            $("#form").attr("action","/enter");
+            $("#form").attr("method","post");
+            $("#form").submit();
+        }
+
     };
 
     /**
-     * $('#cobg') 클릭시 login submit
+     * $('#join') 클릭시 login submit
      */
     var joinAccount = function () {
         $("#form").attr("action","/join");
         $("#form").attr("method","post");
         $("#form").submit();
-        return
+
     };
     
     /**
-     * $('#cobg') 클릭시 login submit
+     * $('#find') 클릭시 login submit
      */
     var findAccount = function () {
         $("#form").attr("action","/find");
         $("#form").attr("method","post");
         $("#form").submit();
-        return
+
     };
 
 
