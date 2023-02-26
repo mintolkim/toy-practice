@@ -1,25 +1,24 @@
 const connection = require("../../common/db/dbPool");
 const mysql = require("mysql");
-const sql = require("../mapper/JIQuery")
+const sql = require("../mapper/JIQuery");
+const logger = require("../../common/config/winston");
 
 const result = {
-    join : (params) => {
-        console.log(params);
+    join : async (params) => {
+        logger.debug(params);
 
         var query = sql.userInsert;
         var format = mysql.format(query, params);
 
-        console.log(format);
+        logger.debug(format);
         
-        return connection(format);
+        return await connection(format);
     },
-    idChk : (param) => {
+    idChk : async (param) => {
         var query = sql.chkUesrId;
         var format = mysql.format(query, param);
 
-        //console.log(format);
-        return console.log(connection(format))
-        //return connection(format);
+        return await connection(format);
     }
 }
 

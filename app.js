@@ -3,7 +3,7 @@ const path = require("path");
 const app = express();
 const port = 4000;
 const http = require("http").Server(app);
-const mysql = require("mysql");
+const logger = require("./server/common/config/winston");
 
 const bodyParser = require("body-parser");                  //bodyParser 설정
 const router = require("./server/route/router");
@@ -19,5 +19,5 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(router);
 
 http.listen(port, ()=>{
-    console.log(`${port} 시작`);
+    logger.info(`${port} 시작`);
 })

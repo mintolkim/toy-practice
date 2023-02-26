@@ -1,6 +1,6 @@
 const result = {
-    main : (req, res) => {
-        res.render("ejs/co/CO010000M.ejs");
+    main : async (req, res) => {
+        return res.render("ejs/co/CO010000M.ejs");
     }
 }
 

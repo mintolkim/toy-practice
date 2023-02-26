@@ -1,9 +1,9 @@
 const result = {
-    login : (req, res) => {
-        res.render("ejs/ji/JI010000M.ejs");
+    login : async (req, res) => {
+        return res.render("ejs/ji/JI010000M.ejs");
     },
-    find : (req, res) => {
-        res.render("ejs/ji/JI030000M.ejs");
+    find : async (req, res) => {
+        return res.render("ejs/ji/JI030000M.ejs");
     }
 }
 

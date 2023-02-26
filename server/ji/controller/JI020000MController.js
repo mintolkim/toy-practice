@@ -1,11 +1,12 @@
 const JI020000MService = require("../service/JI020000MService");
+const logger = require("../../common/config/winston");
 
 
 const result = {
-    account : (req, res) => {
-        res.render("ejs/ji/JI020000M.ejs");
+    account : async (req, res) => {
+        return res.render("ejs/ji/JI020000M.ejs");
     },
-    pwChk : (req, res) => {
+    pwChk : async (req, res) => {
         var resultPw;
         const { password, pwConfirm } = req.body;
 
@@ -17,30 +18,30 @@ const result = {
         
         return res.json(resultPw);
     },
-    idChk : (req, res) => {
+    idChk : async (req, res) => {
         const id = req.body.id;
 
-        var resultId = JI020000MService.idChk(id);
+        var resultId = await JI020000MService.idChk(id);
         
-        console.log(resultId);
+        logger.debug(JSON.stringify(resultId));
 
-        if(resultId == ""){
-            //console.log(resultId);
-            resultId = 1;
-        }else{
-            //console.log(resultId);
+        //id 중복
+        if(resultId.length > 0){
             resultId = 0;
+        }else{
+            resultId = 1;
         }
         
-        res.json(resultId);
+        return res.json(resultId);
     }
     ,
-    join : (req, res) => {
+    join : async (req, res) => {
         var message = "가입을 환영합니다 \n 로그인 해주세요";
         const { nick, id, password } = req.body;
         params = [nick, id, password];
-        var result = JI020000MService.join(params);
-        return res.render("ejs/ji/JI010000M.ejs", {message : message});
+        await JI020000MService.join(params);
+
+        return res.render("ejs/ji/JI010000M.ejs");
     }
 }
 
