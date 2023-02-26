@@ -8,6 +8,7 @@ const DI010000MController = require("../di/controller/DI010000MController");
 
 router.get("/",asyncWrap(CO010000MController.main));
 router.post("/login",asyncWrap(JI010000MController.login));
+router.post("/loginChk",asyncWrap(JI010000MController.loginChk));
 router.post("/find", asyncWrap(JI010000MController.find));
 router.post("/join", asyncWrap(JI020000MController.account));
 router.post("/joinAccount", asyncWrap(JI020000MController.join));

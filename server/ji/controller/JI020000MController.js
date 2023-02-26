@@ -41,7 +41,7 @@ const result = {
         params = [nick, id, password];
         await JI020000MService.join(params);
 
-        return res.render("ejs/ji/JI010000M.ejs");
+        return res.render("ejs/ji/JI010000M.ejs", {message : message});
     }
 }
 
