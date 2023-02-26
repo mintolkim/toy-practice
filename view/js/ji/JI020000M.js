@@ -14,7 +14,6 @@ var JI020000M = (function ($) {
     var korean = null;
 
     $(function () {
-
         specialSb = /[~!@#\#$%<>^&*]/;
         korean = /^[가-힣]+$/;
 
@@ -28,7 +27,6 @@ var JI020000M = (function ($) {
      * $('#joinMemo') 클릭 시 유효성 검사 및 jogin submit
     */
     var joinCheck = function () {
-
         if ($("#nick").val() == "") {
             alert("닉네임을 입력해주세요");
             return
@@ -61,7 +59,6 @@ var JI020000M = (function ($) {
             $("form").attr("method", "post");
             $("form").submit();
         }
-
     }
 
     /**

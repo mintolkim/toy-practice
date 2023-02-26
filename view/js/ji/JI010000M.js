@@ -33,7 +33,7 @@ var JI010000M = (function ($) {
                 data: { id: $("#id").val(), password: $("#password").val() },
                 success: function (result) {
                     if (result == 1) {
-                        $("form").attr("action", "/enter");
+                        $("form").attr("action", "/enter/"+$("#id").val());
                         $("form").attr("method", "post");
                         $("form").submit();
                     } else {
@@ -56,7 +56,6 @@ var JI010000M = (function ($) {
         $("form").attr("action", "/join");
         $("form").attr("method", "post");
         $("form").submit();
-
     };
 
     /**
@@ -66,7 +65,6 @@ var JI010000M = (function ($) {
         $("form").attr("action", "/find");
         $("form").attr("method", "post");
         $("form").submit();
-
     };
 
 
