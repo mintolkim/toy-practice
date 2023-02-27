@@ -1,14 +1,13 @@
 const logger = require("../../common/config/winston");
 
 const result = {
-    note : async (req, res) => {
-        return res.render("ejs/di/DI010000M.ejs");
-    },
+    //로그아웃
     logout : async (req, res) => {
         logger.debug(req.session.user);
         logger.debug(req.session.user.id);
         logger.debug(JSON.stringify(req.session));
-        var message = "로그아웃 되었습니다.";
+        var message = "";
+        //session 지우기
         req.session.destroy((err) => {
             if(err){
                 logger.debug(err);

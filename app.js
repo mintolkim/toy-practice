@@ -28,7 +28,10 @@ app.use(session({
     secret: "my secret", 
     resave: false, 
     saveUninitialized: false,
-    store: sessionStore
+    store: sessionStore,
+    cookie:{
+        maxAge: 30000
+    }
 }))
 
 app.use(router);

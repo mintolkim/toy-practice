@@ -42,7 +42,7 @@ body {
         align-items: center;
         overflow: hidden;
     }
-    .dibg{
+    .dibg {
         width: 100vw;
         height: 240px;
         background-image: url("../image/windowCat.png");
@@ -50,13 +50,17 @@ body {
         background-repeat: no-repeat;
 
     }
-    .logout{
+    .nick {
+        color: white;
+        text-shadow: 2px 2px 2px #3a3636;
+    }
+    .logout {
         position: absolute; z-index: 3;
         color: rgb(179, 179, 179);
         width: 100vw;
         text-align: right;
     }
-    .window{
+    .window {
         position: absolute; z-index: 2;
         animation: curtain-aniM 20s cubic-bezier(0.67, -0.07, 0.25, 0.6) infinite alternate;
         background-image: url("../image/item.png");

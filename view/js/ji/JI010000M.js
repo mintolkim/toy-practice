@@ -15,6 +15,8 @@ var JI010000M = (function ($) {
         $('#enter').on("click", clickEvent);
         $('#join').on("click", joinAccount);
         $('#find').on("click", findAccount);
+        $("#id").bind("keydown", enterChk);
+        $("#password").bind("keydown", enterChk);
     });
 
     /**
@@ -28,24 +30,6 @@ var JI010000M = (function ($) {
             alert("비밀번호를 입력해주세요");
             return
         } else {
-            /*$.ajax({
-                url: "/loginChk",
-                type: "post",
-                data: { id: $("#id").val(), password: $("#password").val() },
-                success: function (result) {
-                    if (result == 1) {
-                        $("form").attr("action", "/enter");
-                        $("form").attr("method", "post");
-                        $("form").submit();
-                    } else {
-                        alert("아이디와 비밀번호가 맞지 않습니다.");
-                        return
-                    }
-                },
-                error: function () {
-                    console.log(err);
-                }
-            })*/
             $("form").attr("action", "/loginChk");
             $("form").attr("method", "post");
             $("form").submit();
@@ -80,5 +64,15 @@ var JI010000M = (function ($) {
         }
     }
     
+    /**
+     * ID 클릭시 : 닉네임 유효성 검사 및 인설트 한다
+     * @param event {object} event 객체 
+     */
+    var enterChk = function (e) {
+        if(e.keyCode === 13){
+            clickEvent();
+            return false;
+        }
+    }
 
 })(jQuery);
