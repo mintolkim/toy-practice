@@ -1,7 +1,7 @@
 /**
  * <pre>
  * BINGO PROJECT
- * @File Name      : JI010000M.js
+ * @File Name      : JI020000M.js
  * @author         : mintol kim
  * @Description    : javascript 작성 기본 템플릿
  * @History        : 2023-02-23	mintol kim	최초작성

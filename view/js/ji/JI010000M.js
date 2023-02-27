@@ -11,6 +11,7 @@ var JI010000M = (function ($) {
     "use strict"
 
     $(function () {
+        messageChk();
         $('#enter').on("click", clickEvent);
         $('#join').on("click", joinAccount);
         $('#find').on("click", findAccount);
@@ -27,13 +28,13 @@ var JI010000M = (function ($) {
             alert("비밀번호를 입력해주세요");
             return
         } else {
-            $.ajax({
+            /*$.ajax({
                 url: "/loginChk",
                 type: "post",
                 data: { id: $("#id").val(), password: $("#password").val() },
                 success: function (result) {
                     if (result == 1) {
-                        $("form").attr("action", "/enter/"+$("#id").val());
+                        $("form").attr("action", "/enter");
                         $("form").attr("method", "post");
                         $("form").submit();
                     } else {
@@ -44,10 +45,13 @@ var JI010000M = (function ($) {
                 error: function () {
                     console.log(err);
                 }
-            })
+            })*/
+            $("form").attr("action", "/loginChk");
+            $("form").attr("method", "post");
+            $("form").submit();
         }
 
-    };
+    }
 
     /**
      * $('#join') 클릭시 login submit
@@ -56,7 +60,7 @@ var JI010000M = (function ($) {
         $("form").attr("action", "/join");
         $("form").attr("method", "post");
         $("form").submit();
-    };
+    }
 
     /**
      * $('#find') 클릭시 login submit
@@ -65,7 +69,16 @@ var JI010000M = (function ($) {
         $("form").attr("action", "/find");
         $("form").attr("method", "post");
         $("form").submit();
-    };
+    }
 
+    /**
+     * $('#find') 클릭시 login submit
+     */
+    var messageChk = function () {
+        if($('#message').val() != ""){
+            alert($('#message').val());
+        }
+    }
+    
 
 })(jQuery);

@@ -14,6 +14,7 @@ router.post("/join", asyncWrap(JI020000MController.account));
 router.post("/joinAccount", asyncWrap(JI020000MController.join));
 router.post("/pwChk",asyncWrap(JI020000MController.pwChk));
 router.post("/idChk",asyncWrap(JI020000MController.idChk))
-router.post("/enter/:id", asyncWrap(DI010000MController.note));
+router.post("/enter", asyncWrap(DI010000MController.note));
+router.post("/logout", asyncWrap(DI010000MController.logout));
 
 module.exports = router;
