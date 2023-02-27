@@ -21,6 +21,7 @@ body {
     }
     .write{
         clear: both;
+        text-align: right;
     }
     select {
         border: none;
@@ -78,6 +79,26 @@ body {
         background-color: white;
         box-shadow: 4px #6e6e6e;
     }
+    .note {
+        clear: both;
+        width: 98%;
+        height: 60vh;
+        padding-left: 1%;
+        padding-top: 1%;
+        border: 1px solid black;
+    }
+    .noteTable{
+        width: 100%;
+        height: 100%;
+        border: 1px solid black;
+    }
+    .noteTable td{
+        border: 1px solid black;
+        width: 20%;
+
+    }
+
+
     /*ji02*/
     .join {
         background-image: url(../image//joinM.png);
