@@ -135,7 +135,7 @@ body {
     .noteTable td{
         background-image: url("../image/1.png");
         animation: fadein 2000ms ease-out;
-        background-size: 100%;
+        background-size: 98%;
         background-repeat: no-repeat;
         width: 64px;
         height: 72px;

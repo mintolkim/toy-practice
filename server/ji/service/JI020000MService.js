@@ -6,10 +6,8 @@ const logger = require("../../common/config/winston");
 const result = {
     join : async (params) => {
         logger.debug(params);
-
         var query = JIQuery.userInsert;
         var format = mysql.format(query, params);
-
         logger.debug(format);
         
         return await connection(format);
