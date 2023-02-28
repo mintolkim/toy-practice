@@ -24,7 +24,7 @@
         <div class="note">
             <table class="noteTable">
                 <% for (let i=0; i < list.length; i++) { %>
-                    <% if (i % 5===0) { %>
+                    <% if (i % 5 === 0) { %>
                         <tr>
                             <% } %>
                                 <td>
@@ -32,10 +32,26 @@
                                         <%= list[i].title %>
                                     </a>
                                 </td>
-                            <% if (i % 5===4 || i === list.length -1) { %>
+                            <% if (i % 5 === 4 || i === list.length -1) { %>
                         <tr>
                     <% } %>
                 <% } %>
+            </table>
+        </div>
+        <div class="paging">
+            <table>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                </tr>
             </table>
         </div>
         <div class="write">

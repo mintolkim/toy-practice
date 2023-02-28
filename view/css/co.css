@@ -55,6 +55,13 @@ body {
         text-align: center;
     }
     /*di01*/
+    .paging{
+        clear: both;
+        text-align: center;
+    }
+    .paging table{
+        display: inline-block;
+    }
     .selects{
         float: left;
     }
@@ -128,9 +135,11 @@ body {
         height: 55vh;
         padding-left: 1%;
         padding-top: 5%;
+        text-align: center;
     }
     .noteTable{
         border-spacing: 7px;
+        display: inline-block;
     }
     .noteTable td{
         background-image: url("../image/1.png");
