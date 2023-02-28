@@ -6,9 +6,9 @@ const jiQuery = require("../mapper/JIQuery");
 const result = {
     loginChk : async (params) => {
         var query = jiQuery.loginChk;
-        var sql = mysql.format(query,params);
+        var format = mysql.format(query,params);
 
-        return await connection(sql);
+        return await connection(format);
     }
 }
 

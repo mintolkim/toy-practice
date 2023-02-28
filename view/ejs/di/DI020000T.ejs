@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>나의 작은 메모</title>
+</head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="/css/co.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<body>
+    <form id="form">
+        <div class="memoTwo">
+            <a id="back"><span class="material-symbols-outlined">arrow_back</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            <input type="text" class="memoSubject" placeholder="제목" id="title" name="title">
+            <div class="contents">
+                <div class="memoContents">
+                        <div class="sideMenu">
+                            <span class="material-symbols-outlined">playlist_add</span>
+                            <span class="material-symbols-outlined" id="temSave">save_as</span>
+                        </div>
+                    <textarea name="contents" id="contents" cols="30" rows="10" placeholder="내용"></textarea>
+                </div>
+                <input type="hidden" value="<%= id %>" id="id" name="id">
+                <div class="write">
+                    <a id="write">글쓰기<span class="material-symbols-outlined">drive_file_rename_outline</span>&nbsp;</a>
+                </div>
+            </div>
+        </div>
+    <form>
+</body>
+<script type="text/javascript" src="/js/library/jquery-3.6.3.min.js"></script>
+<script type="text/javascript" src="/js/library/jquery-migrate-1.2.1.js"></script>
+<script src="/js/di/DI020000T.js"></script>
+</html>

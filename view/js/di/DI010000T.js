@@ -11,17 +11,14 @@ var DI010000M = (function ($) {
     "use strict"
 
     $(function () {
-        $('#logout').on("click", logoutAccount);
-        $("#memo").load("/memoList", {id : $("#id").val()});
+        $('#write').on("click", writeMemo);
     });
 
     /**
      * $('#logout') 클릭시 logout submit
      */
-    var logoutAccount = function () {
-        $("form").attr("action", "/logout");
-        $("form").attr("method", "post");
-        $("form").submit();
+    var writeMemo = function () {
+        $("#memo").load("/write",{id : $("#id").val(), category : $("#category").val()});
     };
 
 
