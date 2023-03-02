@@ -139,7 +139,7 @@ body {
     }
     .noteTable{
         border-spacing: 7px;
-        display: inline-block;
+        /*display: inline-block;*/
     }
     .noteTable td{
         background-image: url("../image/1.png");
