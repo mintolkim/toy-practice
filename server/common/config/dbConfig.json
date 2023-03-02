@@ -3,5 +3,6 @@
     "port": 3306,
     "user": "bingo",
     "password": "Xpren97736!",
-    "database": "test"
+    "database": "test",
+    "connectionLimit": 10
 }

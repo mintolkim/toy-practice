@@ -53,6 +53,8 @@ const result = {
     },
     //게시글
     memoList : async (req, res) => {
+        logger.debug('memoList 진입!!!!');
+        
         const {id, category, selectePage} = req.body;
         var page = parseInt(req.query.page);
         var pageSize = parseInt(req.query.pageSize);

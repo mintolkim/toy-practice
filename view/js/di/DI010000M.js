@@ -18,6 +18,7 @@ var DI010000M = (function ($) {
         pageSize = 20;
 
         $('#logout').on("click", logoutAccount);
+        $("#memo").off();
         $("#memo").load("/memoList?page=" + page + "&pageSize=" + pageSize, {id : $("#id").val(), selectePage : page});
     });
 

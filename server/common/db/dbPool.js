@@ -11,11 +11,12 @@ function connection(queries) {
             } else {
                 logger.info("============================");
                 logger.info("dbPool connection");
+                logger.debug(pool._allConnections.length);
                 connection.query(queries, (err, result) => {
                     if (err) {
                         logger.error(err.message);
                         connection.release();
-                        return reject(err);
+                        reject(err);
                     } else {
                         logger.debug(result);
                         connection.release();

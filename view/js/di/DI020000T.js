@@ -20,6 +20,7 @@ var DI010000M = (function ($) {
         $('#write').on("click", writeMemo);
         $('#temSave').on("click", temSave);
         $('#back').on("click", locationBack);
+        $("#memo").off();
     });
 
     /**

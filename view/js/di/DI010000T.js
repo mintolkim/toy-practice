@@ -13,9 +13,9 @@ var DI010000M = (function ($) {
 
     $(function () {
         pageSize = 20;
-
+        $("#memo").off();
         $('#write').on("click", writeMemo);
-        $(document).on("click",".paging-link", movePage);
+        $(document).off('click', '.paging-link').on("click",".paging-link", movePage);
     });
 
     /**
@@ -28,6 +28,7 @@ var DI010000M = (function ($) {
     var movePage = function (){
         var page = $(this).text();
         $("#memo").load("/memoList?page=" + page + "&pageSize=" + pageSize, {id : $("#id").val(), selectePage : page});
+        $(document).off('click', '.paging-link');
     }
 
 
