@@ -9,9 +9,13 @@
  **/
 var DI010000M = (function ($) {
     "use strict"
+    var pageSize;
 
     $(function () {
+        pageSize = 20;
+
         $('#write').on("click", writeMemo);
+        $(document).on("click",".paging-link", movePage);
     });
 
     /**
@@ -20,6 +24,11 @@ var DI010000M = (function ($) {
     var writeMemo = function () {
         $("#memo").load("/write",{id : $("#id").val(), category : $("#category").val()});
     };
+
+    var movePage = function (){
+        var page = $(this).text();
+        $("#memo").load("/memoList?page=" + page + "&pageSize=" + pageSize, {id : $("#id").val()});
+    }
 
 
 })(jQuery);

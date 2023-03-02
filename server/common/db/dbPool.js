@@ -13,9 +13,9 @@ function connection(queries) {
                 logger.info("dbPool connection");
                 connection.query(queries, (err, result) => {
                     if (err) {
+                        logger.error(err.message);
                         connection.release();
-                        reject(err);
-                        throw err
+                        return reject(err);
                     } else {
                         logger.debug(result);
                         connection.release();

@@ -54,14 +54,32 @@ const result = {
     //게시글
     memoList : async (req, res) => {
         const {id, category} = req.body;
-        var params = [id, category];
+        var page = parseInt(req.query.page);
+        var pageSize = parseInt(req.query.pageSize);
+        var pageNum;
+        
+        if(page < 0){
+            page = 1;
+        }else{
+            page = (page - 1) * pageSize;
+        }
 
-        var result = await DI010000MService.memoList(id);
+        logger.debug("값 확인 "+page);
 
-        logger.debug(JSON.stringify(result));
-        logger.debug(result.length);
+        var params = [id, page, pageSize];
+        
+        var cnt = await DI010000MService.memoList(id);
+        
+        if(page > Math.ceil(cnt.length / pageSize)){
+            page = null;
+        }
+        
+        var result = await DI010000MService.memoPage(params);
 
-        return res.render("ejs/di/DI010000T.ejs",{id: id , list: result, paging : result.length});
+        pageNum = Math.ceil(cnt.length / pageSize);
+        logger.debug("페이지 값 : "+Math.ceil(cnt.length / pageSize));
+
+        return res.render("ejs/di/DI010000T.ejs",{id: id , list: result, pageNum : pageNum});
     }
 }
 

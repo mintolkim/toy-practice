@@ -9,10 +9,16 @@
  **/
 var DI010000M = (function ($) {
     "use strict"
+    var page = null;
+    var pageSize = null;
+
 
     $(function () {
+        page = 1;
+        pageSize = 20;
+
         $('#logout').on("click", logoutAccount);
-        $("#memo").load("/memoList", {id : $("#id").val()});
+        $("#memo").load("/memoList?page=" + page + "&pageSize=" + pageSize, {id : $("#id").val()});
     });
 
     /**
