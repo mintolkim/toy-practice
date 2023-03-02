@@ -56,7 +56,8 @@ const result = {
         const {id, category} = req.body;
         var page = parseInt(req.query.page);
         var pageSize = parseInt(req.query.pageSize);
-        var pageNum;
+        var cnt = await DI010000MService.memoList(id);
+        var lastPage = Math.ceil(cnt.length / pageSize);
         
         if(page < 0){
             page = 1;
@@ -64,22 +65,13 @@ const result = {
             page = (page - 1) * pageSize;
         }
 
-        logger.debug("값 확인 "+page);
+        logger.debug("값 확인 " + page );
+        logger.debug("페이지 값 : "+ Math.ceil(cnt.length / pageSize));
 
         var params = [id, page, pageSize];
-        
-        var cnt = await DI010000MService.memoList(id);
-        
-        if(page > Math.ceil(cnt.length / pageSize)){
-            page = null;
-        }
-        
         var result = await DI010000MService.memoPage(params);
 
-        pageNum = Math.ceil(cnt.length / pageSize);
-        logger.debug("페이지 값 : "+Math.ceil(cnt.length / pageSize));
-
-        return res.render("ejs/di/DI010000T.ejs",{id: id , list: result, pageNum : pageNum});
+        return res.render("ejs/di/DI010000T.ejs",{id: id , list: result, pageNum : lastPage});
     }
 }
 

@@ -9,8 +9,13 @@
  **/
 var DI010000M = (function ($) {
     "use strict"
+    var page = null;
+    var pageSize = null;
 
     $(function () {
+        page = 1;
+        pageSize = 20;
+
         $('#logout').on("click", logoutAccount);
         $('#write').on("click", writeMemo);
         $('#temSave').on("click", temSave);
@@ -81,7 +86,7 @@ var DI010000M = (function ($) {
     }
 
     var locationBack = function(){
-        $("#memo").load("/memoList",{id : $("#id").val()});
+        $("#memo").load("/memoList?page=" + page + "&pageSize=" + pageSize, {id : $("#id").val()});
     }
 
 })(jQuery);
