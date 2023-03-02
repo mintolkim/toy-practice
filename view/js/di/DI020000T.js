@@ -48,7 +48,7 @@ var DI010000M = (function ($) {
                 data: { id: $("#id").val(), title: $("#title").val(), contents: $("#contents").val()},
                 success: function (result) {
                     if(result == 1){
-                        $("#memo").load("/memoList",{id : $("#id").val()});
+                        $("#memo").load("/memoList?page=" + page + "&pageSize=" + pageSize, {id : $("#id").val(), selectePage : page});
                     }
                 },
                 error: function () {
@@ -86,7 +86,7 @@ var DI010000M = (function ($) {
     }
 
     var locationBack = function(){
-        $("#memo").load("/memoList?page=" + page + "&pageSize=" + pageSize, {id : $("#id").val()});
+        $("#memo").load("/memoList?page=" + page + "&pageSize=" + pageSize, {id : $("#id").val(), selectePage : page});
     }
 
 })(jQuery);

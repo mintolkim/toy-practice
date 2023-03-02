@@ -27,7 +27,7 @@ var DI010000M = (function ($) {
 
     var movePage = function (){
         var page = $(this).text();
-        $("#memo").load("/memoList?page=" + page + "&pageSize=" + pageSize, {id : $("#id").val()});
+        $("#memo").load("/memoList?page=" + page + "&pageSize=" + pageSize, {id : $("#id").val(), selectePage : page});
     }
 
 

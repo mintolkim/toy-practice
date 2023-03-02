@@ -53,7 +53,7 @@ const result = {
     },
     //게시글
     memoList : async (req, res) => {
-        const {id, category} = req.body;
+        const {id, category, selectePage} = req.body;
         var page = parseInt(req.query.page);
         var pageSize = parseInt(req.query.pageSize);
         var cnt = await DI010000MService.memoList(id);
@@ -71,7 +71,7 @@ const result = {
         var params = [id, page, pageSize];
         var result = await DI010000MService.memoPage(params);
 
-        return res.render("ejs/di/DI010000T.ejs",{id: id , list: result, pageNum : lastPage});
+        return res.render("ejs/di/DI010000T.ejs",{id: id , list: result, pageNum : lastPage , selectePage});
     }
 }
 

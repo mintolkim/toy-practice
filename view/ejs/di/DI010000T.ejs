@@ -41,6 +41,7 @@
         <div class="paging">
             <table>
                 <tr>
+                    <input type="hidden" value="<%= selectePage %>" id="selectePage">
                     <% for(var i = 0; i < pageNum; i++){ %>
                         <td><a class="paging-link"><%= i + 1 %></a></td>
                     <% } %>
